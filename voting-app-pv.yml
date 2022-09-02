@@ -2,6 +2,8 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: voting-app-pv
+  labels:
+    name: pv
 spec:
   hostPath:
     path: /vote/pv
