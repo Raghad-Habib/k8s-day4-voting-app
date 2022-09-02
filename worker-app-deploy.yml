@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker-app-deploy
+  labels:
+    app: voting-app
+spec:
+  template:
+    metadata:
+      name: worker-app-pod
+      labels:
+        app: voting-app
+    spec:
+      containers:
+        - name: worker-app
+          image: raghadhabib/worker:latest
+  replicas: 1
+  selector:
+    matchLabels:
+      app: voting-app
