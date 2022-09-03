@@ -9,9 +9,5 @@ spec:
     requests:
       storage: 2Gi
   storageClassName: local-path
-  selector:
-    matchLabels:
-      name: pv
-
 
   
